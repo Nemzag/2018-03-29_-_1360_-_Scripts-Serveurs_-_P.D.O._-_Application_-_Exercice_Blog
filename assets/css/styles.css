@@ -1,0 +1,23 @@
+/**
+ * Created by PhpStorm.
+ * User: nemzag
+ * Date: 2018-04-11
+ * Time: 21:09
+ */
+
+table th, table td {
+    padding: 0.8em;
+    border: #0D47A1 solid 1px;
+}
+
+table th {
+    background-color: #EF6C00;
+    color: white;
+}
+
+table td {
+    background-color: #C5E1A5;
+    color: black;
+    text-align: justify;
+    vertical-align: top;
+}
