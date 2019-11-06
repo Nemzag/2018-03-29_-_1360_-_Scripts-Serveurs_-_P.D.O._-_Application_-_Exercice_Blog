@@ -25,10 +25,11 @@ $dbh = connect();
 $sql = 'SELECT * 
           FROM 2018_scripts_serveurs_blog.posts
      LEFT JOIN 2018_scripts_serveurs_blog.categories
-	        ON 2018_scripts_serveurs_blog.posts.idCategory = 2018_scripts_serveurs_blog.categories.id
+	        ON 2018_scripts_serveurs_blog.categories.id = 2018_scripts_serveurs_blog.posts.idCategory
      LEFT JOIN 2018_scripts_serveurs_blog.users
-            ON 2018_scripts_serveurs_blog.posts.idUser = 2018_scripts_serveurs_blog.users.id
-      ORDER BY created DESC';
+            ON 2018_scripts_serveurs_blog.users.id = 2018_scripts_serveurs_blog.posts.idUser
+      ORDER BY 2018_scripts_serveurs_blog.posts.created
+          DESC;';
 
 $result = $dbh->query($sql);
 ?>
@@ -68,11 +69,14 @@ $result = $dbh->query($sql);
 <?php
 
 $sql = 'SELECT * 
-        FROM blog.posts
-        LEFT JOIN blog.categories ON blog.posts.idCategory = blog.categories.id
-        LEFT JOIN blog.users ON blog.posts.idUser = blog.users.id
-        ORDER BY created DESC
-        LIMIT 5';
+          FROM 2018_scripts_serveurs_blog.posts
+     LEFT JOIN 2018_scripts_serveurs_blog.categories
+            ON 2018_scripts_serveurs_blog.categories.id = 2018_scripts_serveurs_blog.posts.idCategory 
+     LEFT JOIN 2018_scripts_serveurs_blog.users
+            ON 2018_scripts_serveurs_blog.users.id = 2018_scripts_serveurs_blog.posts.idUser
+      ORDER BY 2018_scripts_serveurs_blog.posts.created
+          DESC
+         LIMIT 5;';
 
 $result = $dbh->query($sql);
 
