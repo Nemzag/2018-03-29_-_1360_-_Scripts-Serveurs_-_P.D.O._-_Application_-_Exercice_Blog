@@ -1,13 +1,11 @@
 ###
 ## Created by PhpStorm.
 ## User: Nemzag aka Gaz‑mên Arifi (Shkypi, 1979-09-30).
-## Date: 06/11/2019
-## Time: 22:12
+## Date: 2022-02-10
+## Time: 21:02
 ## Updated:
 ###
 
-### PhpStorm Idea ###
-.idea/*
-
-
-
+###> phpstorm ###
+/.idea/
+###> phpstorm ###
